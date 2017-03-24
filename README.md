@@ -1,4 +1,4 @@
-# t-fp-assoc
+# t-fp-dissoc
 
 ## Usage
 
@@ -30,4 +30,4 @@ The type for `result3` is:
 
 ## Installation
 
-Use `npm install t-fp-assoc` to install.
+Use `npm install t-fp-dissoc` to install.
