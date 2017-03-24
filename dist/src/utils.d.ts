@@ -1,5 +1,5 @@
-export default function dissoc<A>(k: string, ob: {
-    [k: string]: A;
+export default function dissoc<T>(k: string, ob: {
+    [P in keyof T]: T[P];
 }): {
-    [k: string]: A;
+    [P in keyof T]?: T[P];
 };

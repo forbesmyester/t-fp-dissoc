@@ -1,5 +1,5 @@
-export default function dissoc<A>(k: string, ob: {[k: string]: A}): {[k: string]: A} {
-    let {...r}: {[k: string]: A} = {...ob};
-    delete r[k];
-    return r;
+export default function dissoc<T>(k: string, ob: { [P in keyof T]: T[P] }): { [P in keyof T]?: T[P] } {
+    let z = Object.assign({}, ob);
+    delete z[k];
+    return z;
 }

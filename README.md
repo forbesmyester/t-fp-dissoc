@@ -6,11 +6,27 @@ Simple `dissoc()` function wrote in Typescript.
 
     import dissoc from 't-fp-assoc';
 
-    let input: {a: boolean, b: number, c: string}  = {a: false, b: 1, c: 'hi'};
-    let result = dissoc('c', input); // {a: false, b: 2}
+    let input1: Letter = {a: false, b: 1, c: 'hi'};
+    let input2: {a: boolean, b: number, c: string}  = {a: false, b: 1, c: 'hi'};
+    let input3: {[k: string]: number|string|boolean}  = {a: false, b: 1, c: 'hi'};
 
-The type for result is still `{ [k: string]: string | number | boolean; }`.
+    let result1 = dissoc('c', input1); // {a: false, b: 1}
+    let result2 = dissoc('c', input2); // {a: false, b: 1}
+    let result3 = dissoc('c', input3); // {a: false, b: 1}
 
+The type for `result1` and `result2` is:
+
+    {
+        a?: boolean | undefined;
+        b?: number | undefined;
+        c?: string | undefined;
+    }`.
+
+The type for `result3` is:
+
+    {
+        [x: string]: string | number | boolean | undefined;
+    }
 
 ## Installation
 
